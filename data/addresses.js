@@ -4,4 +4,8 @@ const whitelistAddresses = [
   "0xF9eF71BF3F5834BB75C9DD20E041bDfEbE931fD2",
 ];
 
-module.exports = { whitelistAddresses };
+const getAddresses = () => {
+  return whitelistAddresses;
+};
+
+module.exports = { getAddresses };
