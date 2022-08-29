@@ -5,9 +5,6 @@ const { MerkleTree } = require('merkletreejs')
 const { getAddresses } = require('./data/addresses.js')
 
 const whitelistAddresses = getAddresses()
-/*
-["0x9647c73e76ca06125ffdcfabb99652bfac7f3907ff1f6b23db73903b8981b226","0xf14c594625b1b2223b452cb1ff53dfe0ee16168c710d0e7d3ab3bbee8c76964f"]
-*/
 
 const app = express()
 app.use(cors())
