@@ -1,16 +1,18 @@
-const keccak256 = require("keccak256");
-const { MerkleTree } = require("merkletreejs");
-const { whitelistAddresses } = require("./data/addresses.js");
+const keccak256 = require('keccak256')
+const { MerkleTree } = require('merkletreejs')
+const { getAddresses } = require('./data/addresses.js')
 
-let leafNodes = whitelistAddresses.map((addr) => keccak256(addr));
-let merkleTree = new MerkleTree(leafNodes, keccak256, { sortPairs: true });
+const whitelistAddresses = getAddresses()
 
-const rootHash = merkleTree.getRoot();
+let leafNodes = whitelistAddresses.map((addr) => keccak256(addr))
+let merkleTree = new MerkleTree(leafNodes, keccak256, { sortPairs: true })
 
-console.log(merkleTree.toString());
+const rootHash = merkleTree.getRoot()
 
-const address = leafNodes[0];
+console.log(merkleTree.toString())
 
-const hexProof = merkleTree.getHexProof(address);
+const address = leafNodes[0]
 
-console.log(hexProof);
+const hexProof = merkleTree.getHexProof(address)
+
+console.log(hexProof)
