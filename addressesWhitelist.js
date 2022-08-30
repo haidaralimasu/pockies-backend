@@ -1,11 +1,4 @@
 const arr = [
-  '0xA9889aAC1c8d0e8d5F874CdC9D475D0Dfcf32EB1',
-  '0xDf9f0593449Ec6e6a3706EBB505794FdB83FEF77',
-  '0xd50FAFBC4B77b49258CE7E964eBC71E8D01Fe355',
-  '0xF9eF71BF3F5834BB75C9DD20E041bDfEbE931fD2',
-]
-
-const whitelistAddresses = [
   '0x72e40ba441cefb3e76d6f4cc44cc03a2cf1e2324',
   '0x7e5adb0fc19eb51685395e389ce1c0f894d2b139',
   '0x08a66a724277e61f0f993205ed92ce1ce2cfcc32',
@@ -4458,8 +4451,8 @@ const whitelistAddresses = [
   '0x5120a9B7C6CFC097D415c6e4Eff83f786d4D6B39',
 ]
 
-const getAddresses = () => {
-  return whitelistAddresses
-}
+for (let index = 0; index < arr.length; index++) {
+  const element = arr[index]
 
-module.exports = { getAddresses }
+  console.log(element)
+}
